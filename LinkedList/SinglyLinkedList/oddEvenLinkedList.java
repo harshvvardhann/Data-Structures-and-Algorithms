@@ -1,5 +1,16 @@
 package LinkedList.SinglyLinkedList;
 class oddEvenLinkedList {
+    class ListNode {
+        int data;
+        ListNode next;
+        ListNode prev;
+    
+        ListNode(int val) {
+            data = val;
+            next = null;
+            prev = null;
+        }
+    }
     public ListNode oddEvenList(ListNode head) {
         if(head==null || head.next==null){
             return head;
