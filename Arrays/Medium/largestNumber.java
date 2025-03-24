@@ -1,8 +1,8 @@
 package Arrays.Medium;
 import java.util.Arrays;
 
-class Solution {
-    public String largestNumber(int[] nums) {
+class largestNumber {
+    public static String largestNumber1(int[] nums) {
         // Convert int array to String array
         String[] strNums = new String[nums.length];
         for (int i = 0; i < nums.length; i++) {
@@ -22,5 +22,10 @@ class Solution {
         }
 
         return result.toString();
+    }
+    public static void main(String[] args) {
+        int arr[] = {3,30,34,5,9};
+        String ans = largestNumber1(arr);
+        System.out.println(ans);
     }
 }
