@@ -1,4 +1,4 @@
-package DSA.Arrays.Medium;
+package Arrays.Medium;
 class atoi {
     public int myAtoi(String s) {
         int i = 0;
