@@ -1,8 +1,8 @@
 package Trees;
 import java.util.List;
 import java.util.ArrayList;
-class preorderTraversal {
-    class TreeNode{
+class PostOrderTraversal {
+     class TreeNode{
         TreeNode left;
         TreeNode right;
         int val;
@@ -12,16 +12,16 @@ class preorderTraversal {
             right = null;
         }
     }
-    public List<Integer> getPreOrderTraversal(TreeNode root,List<Integer> list){
+    public List<Integer> getPostOrderTraversal(TreeNode root,List<Integer> list){
         if(root == null) return list;
+        getPostOrderTraversal(root.left,list);
+        getPostOrderTraversal(root.right,list);
         list.add(root.val);
-        getPreOrderTraversal(root.left,list);
-        getPreOrderTraversal(root.right,list);
         return list;
     }
-    public List<Integer> preorderTraversal1(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
-        list = getPreOrderTraversal(root,list);
+        list = getPostOrderTraversal(root,list);
         return list;
     }
 }
