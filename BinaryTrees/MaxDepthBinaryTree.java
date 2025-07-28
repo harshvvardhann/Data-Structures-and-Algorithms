@@ -1,4 +1,4 @@
-package Trees;
+package BinaryTrees;
 class MaxDepthBinaryTree {
      class TreeNode{
         TreeNode left;

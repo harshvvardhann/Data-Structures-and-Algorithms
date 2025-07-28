@@ -1,8 +1,8 @@
-package Trees;
+package BinaryTrees;
 import java.util.List;
 import java.util.ArrayList;
-class InorderTraversal {
-    class TreeNode{
+class PostOrderTraversal {
+     class TreeNode{
         TreeNode left;
         TreeNode right;
         int val;
@@ -12,17 +12,16 @@ class InorderTraversal {
             right = null;
         }
     }
-    public List<Integer> getInorderTraversal(TreeNode root,List<Integer> list) {
+    public List<Integer> getPostOrderTraversal(TreeNode root,List<Integer> list){
         if(root == null) return list;
-        getInorderTraversal(root.left,list);
+        getPostOrderTraversal(root.left,list);
+        getPostOrderTraversal(root.right,list);
         list.add(root.val);
-        getInorderTraversal(root.right,list);
-
         return list;
     }
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
-        list = getInorderTraversal(root,list);
+        list = getPostOrderTraversal(root,list);
         return list;
     }
 }
