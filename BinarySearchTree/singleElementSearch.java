@@ -1,4 +1,4 @@
-package BinarySearchTree;
+
 import java.util.*;
 
 public class singleElementSearch {
@@ -45,4 +45,3 @@ public class singleElementSearch {
         System.out.println("The single element is: " + ans);
     }
 }
-

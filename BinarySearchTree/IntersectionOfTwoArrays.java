@@ -1,4 +1,4 @@
-package BinarySearchTree;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +12,7 @@ class IntersectionOfTwoArrays {
         for (int i : nums2) {
             set2.add(i);
         }
-        //Removed Duplicates using Hashset
+        // Removed Duplicates using Hashset
         Set<Integer> Main_Set = new HashSet<>();
         for (Integer var : set1) {
             if (set2.contains(var)) {
